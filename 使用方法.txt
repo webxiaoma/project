@@ -26,9 +26,9 @@ QQ 1376557466
    })
  
 2.页面滚动到摸某个位置时，该位置加载动画
-方法: mAnimate(funOne,funTwo,topPx)
+方法: mAnimate(topPx,funOne,funTwo)
  
-   $("div").mAnimate(function(){},function(){},100)
+   $("div").mAnimate(100,function(){},function(){})
 
 解释：第一个function为滚动到该div时 的回调函数，用来处理给动画元素添加css动画类，
       第二个function为离开该div时的回调函数，用来移除动画元素类。（可选）
