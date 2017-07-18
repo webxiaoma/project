@@ -18,74 +18,77 @@ $(function(){
 
 
 (function(rootObj){
-	// 点击按钮页面滑动到指定位置的效果方法
+  // ********************点击按钮页面滑动到指定位置的效果方法 start**********************
    var mScrollTarget=rootObj.mScrollTarget;
    $.fn[mScrollTarget]=function(obj){
-	   	 // 默认值
-	   var __def__={
-	   	 time:300,
-	     sumTop:0
-	   }
-   	    $.extend(this,__def__,obj);
+       // 默认值
+     var __def__={
+       time:300,
+       sumTop:0
+     }
+        $.extend(this,__def__,obj);
         
-   	    if(this.el == null){
-   	       throw "el is required" //必须参数抛出错误
-   	    }
+        if(this.el == null){
+           throw "el is required" //必须参数抛出错误
+        }
 
-		var tag=this.el;
-		var time=this.time;
-		var sumTop=this.sumTop; 
-		$(this).children().on("click",function(){
-			var index= $(this).index(); 
-			var hetop=$(tag).eq(index).position().top-sumTop;
-			$("body,html").animate({"scrollTop":hetop},time)
+    var tag=this.el;
+    var time=this.time;
+    var sumTop=this.sumTop; 
+    $(this).children().on("click",function(){
+      var index= $(this).index(); 
+      var hetop=$(tag).eq(index).position().top-sumTop;
+      $("body,html").animate({"scrollTop":hetop},time)
         })
     }
 
+// ********************点击按钮页面滑动到指定位置的效果方法 end**********************
 
-    // 滚动页面加载动画
+// ********************  滚动页面加载动画 start**********************
     
     var mAnimate=rootObj.mAnimate; 
      $.fn[mAnimate]=function(funOne,funTwo,topPX){
-           	 var __def__={
-           		funOne:function(){},
-           		funTwo:function(){},
-           		topPX:0
-           	 }
+             var __def__={
+              funOne:function(){},
+              funTwo:function(){},
+              topPX:0
+             }
              var __pro__={
-             	funOne:funOne,
-         		  funTwo:funTwo,
-         		  topPX:topPX
+              funOne:funOne,
+              funTwo:funTwo,
+              topPX:topPX
              }
            
            // 判断第二个参数回调函数存不存在
               if(typeof arguments[1] == "number" ){
-              	 __pro__.funTwo= function () {};
-              	 __pro__.topPX=arguments[1];
-              	 
+                 __pro__.funTwo= function () {};
+                 __pro__.topPX=arguments[1];
+                 
               }
            
-         	$.extend(this,__def__,__pro__);
+          $.extend(this,__def__,__pro__);
 
-           	 var that=this;
-           	    
-           	   $(window).scroll(function(){
+             var that=this;
+                
+               $(window).scroll(function(){
               
-           	   	   var scro= $("body,heml").scrollTop()
+                   var scro= $("body,heml").scrollTop()
                    var top = that.position().top-scro; // 到达动画开始位置
                    var height=that.height()+that.position().top; //离开动画结束位置
                    
                    if(top<that.topPX && scro<height){
-                   	  that.funOne.call(that);
+                      that.funOne.call(that);
                    }else {
-                   	  that.funTwo.call(that);
-                   	 
+                      that.funTwo.call(that);
+                     
                    }
-           	   })
+               })
      }
 
+// ********************  滚动页面加载动画 end**********************
 
-     // 表单验证
+// ******************** 表单验证 start *************************
+
      var mInput = rootObj.mInput;
      $.fn[mInput]=function(obj){
         var __def__={
@@ -165,7 +168,9 @@ $(function(){
         })
      }
 
-     // 表单提交
+// ******************** 表单验证 end *************************
+
+// ******************** 表单提交证 start *************************
     var mSubmit=rootObj.mSubmit;
     $.fn[mSubmit]=function(fun){
       var inp=document.getElementsByTagName('input');
@@ -183,12 +188,17 @@ $(function(){
         
        })
     }
+
+
+// ******************** 表单提交证 end *************************
+
 })({
    mScrollTarget:"mScrollTarget", // 点击按钮页面滑动到指定位置的效果
    mAnimate:"mAnimate",           // 滚动页面加载动画
    mInput:"mInput",                // 表单验证
    mSubmit:"mSubmit"               //表单提交
 })
+
 
 
 })

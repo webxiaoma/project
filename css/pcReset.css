@@ -1,0 +1,50 @@
+/**
+   * edition : 1.0
+   * author: 马新想 (webxiaoma)
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    box-sizing:border-box;
+    list-style: none;
+    color:#333;
+}
+body html{
+    width:100%;
+    line-height: 1;
+    font-size:20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+.clear:after{
+    display:block;
+    content:"";
+    clear:both;
+    vertival:hidden;
+}
+
+.div{
+   width:400px;
+   height:200px;
+}
+.div p{
+    width:100px;
+    height:100px;
+    padding:20px;
+    border:10px solid #eee;
+    float:left;
+    background: red;
+}
