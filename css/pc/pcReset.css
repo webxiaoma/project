@@ -36,15 +36,3 @@ footer, header, menu, nav, section {
     vertival:hidden;
 }
 
-.div{
-   width:400px;
-   height:200px;
-}
-.div p{
-    width:100px;
-    height:100px;
-    padding:20px;
-    border:10px solid #eee;
-    float:left;
-    background: red;
-}

@@ -4,6 +4,8 @@
 // 设置全局像素比，使页面自适应手机屏幕
 
 
+// 不建议使用第一个，在x5 内核的浏览器中有问题
+
 (function(){
   function autoPhone() {
     var width = window.screen.width; // 获取屏幕宽度
@@ -22,9 +24,15 @@
 
     document.head.insertBefore(meta,document.head.firstChild);
   }
-  autoPhone();
-  window.onresize = function(){
-    autoPhone();
-    // alert(1)
+  // autoPhone();
+
+})()
+
+// 建议使用 rem
+(function(){
+  function autoRem(sum){
+    var width = window.screen.width; //获取移动端屏幕宽度
+    document.documentElement.style.fontSize = width/sum + "px";
   }
+  autoRem(50);
 })()
