@@ -47,24 +47,18 @@ $(function(){
 // ********************  滚动页面加载动画 start**********************
     
     var mAnimate=rootObj.mAnimate; 
-     $.fn[mAnimate]=function(funOne,funTwo,topPX){
+     $.fn[mAnimate]=function(topPX,funOne,funTwo){
              var __def__={
+              topPX:0,
               funOne:function(){},
               funTwo:function(){},
-              topPX:0
              }
              var __pro__={
+              topPX:topPX,
               funOne:funOne,
               funTwo:funTwo,
-              topPX:topPX
+
              }
-           
-           // 判断第二个参数回调函数存不存在
-              if(typeof arguments[1] == "number" ){
-                 __pro__.funTwo= function () {};
-                 __pro__.topPX=arguments[1];
-                 
-              }
            
           $.extend(this,__def__,__pro__);
 
@@ -80,7 +74,6 @@ $(function(){
                       that.funOne.call(that);
                    }else {
                       that.funTwo.call(that);
-                     
                    }
                })
      }

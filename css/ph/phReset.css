@@ -10,6 +10,7 @@
     vertical-align: baseline;
     box-sizing:border-box;
     list-style: none;
+    font-family: "Microsoft Yahei","Arial";
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -19,7 +20,8 @@ footer, header, menu, nav, section {
 }
 
 html, body {
-    width: 100%;
+    man-width:750px;
+    min-height:100%;
     line-height: 1;
 }
 

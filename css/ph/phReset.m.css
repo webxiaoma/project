@@ -18,6 +18,7 @@ footer, header, menu, nav, section {
 
 html, body {
     width: 100%;
+    min-width:750px;
     line-height: 1;
 }
 
