@@ -14,7 +14,7 @@
        var initArray = [];
        var len=Math.ceil(intea.length/2);
        var fen = intea.length%2; // 能否两两等分
-       var c = 0;
+       var c = 0, a = 0;
        for(var i=0;i<len;i++){
           var start = 2*i;
           newArray.push(intea.substr(start,2));
@@ -41,14 +41,15 @@
                   for(var i=1,le=newArray.length; i<le; i++){
                       if(c<10){
                         initArray[i] = "0" + c;
-                        initArray[0] = c==0?1:c;
                         c++; 
                       }else if(c<99 && c>=10){
                         initArray[i] = c;
                         c++;
                       }else{
                         c = 0;
-                      }    
+                      }   
+
+                        initArray[0] = a<9?a++:a=1; // 第一个数字
                   }
 
                }
