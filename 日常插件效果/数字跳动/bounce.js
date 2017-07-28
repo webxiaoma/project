@@ -11,7 +11,8 @@
        var inte = Number(arrayMun[0]);
        var folt = Number(arrayMun[1]);
        
-       console.log(arrayMun)
+
+       console.log(inte,folt);
    }
 
 })(window,Object,{
