@@ -16,7 +16,7 @@
        var len=Math.ceil(intea.length/2);
        var fen = intea.length%2; // 能否两两等分
        var c = 0, a = 0;
-       for(var i=0;i<len;i++){
+       for(var i=0;i<len;i++){ // 初始化 newArray 和 initArry 数组
           var start = 2*i;
           newArray.push(intea.substr(start,2));
           initArray.push(0);
@@ -57,7 +57,8 @@
               arrayMun[1] = c<10?"0"+c:c; // 小数变化
               that.innerText = typeof folt == "undefined"?
                    initArray.join("") : initArray.join("")+"."+ arrayMun[1];
-          }
+          },
+
       }
 
 
