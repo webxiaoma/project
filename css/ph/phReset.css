@@ -6,6 +6,8 @@
     padding: 0;
     border: 0;
     box-sizing:border-box;
+    font-family: "Microsoft Yahei", "Arial";
+
  }
 blockquote, body, button, dd, dl, dt, fieldset, form, 
 h1, h2, h3, h4, h5, h6, hr, input, select,option,legend, 
@@ -14,7 +16,6 @@ li, ol, p, pre, td, textarea, th, ul{
     font-weight: normal;
     vertical-align: baseline;
     list-style: none;
-    font-family: "Microsoft Yahei","Arial";
 }
 
 /* HTML5 display-role reset for older browsers */
