@@ -23,8 +23,7 @@
                $(window).scroll(function(){
               
      
-                   var scro= $("body,html").scrollTop()
-                            // alert(scro)
+                   var scro= $(window).scrollTop()
                    var top = that.position().top-scro; // 到达动画开始位置
                    var height=that.height()+that.position().top; //离开动画结束位置
                    
