@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数字跳动</title>
+	<style type="text/css">
+       #div{width:300px;height:200px;font-size: 30px;font-weight:bold;}
+	</style>
+</head>
+<body>
+	<div id="div">
+		923489.12
+	</div>
+	<div id="adiv">
+		129
+	</div>
+    <!--目前不支IE8-->
+	<script src="bounce.js"></script>
+	<script>
+	   document.getElementById("div").mBounce(50);
+	   document.getElementById("adiv").mBounce();
+	   // 数字调动，参数默认是 80 毫秒
+	</script>
+</body>
+</html>
