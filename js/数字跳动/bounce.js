@@ -5,10 +5,10 @@
 (function(w,O,obj){
    var mBounce = obj.mBounce;
    O.prototype[mBounce] = function(time){
-
+          alert(1)
        var that = this;
    	   var time = time || 50;
-       var arrayMun =   this.innerText.split(".");
+       var arrayMun = (this.innerText || "").split(".");
        var intea = arrayMun[0]; // 整数部分
        var folt = arrayMun[1]; // 小数部分(可能不存在)
        var newArray = [];  
