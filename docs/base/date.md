@@ -7,7 +7,7 @@ meta:
     content: 本文为Java日期与时间的介绍
 ---
 
-# Date 时间
+# 日期于时间
 
 
 在`Java8`之前, 日期时间Api 使用的是`Date` 和 `Calendar`
@@ -21,7 +21,9 @@ meta:
 - `LocalDateTime` 获取当前日期和时间
 - `LocalDate` 获取当前日期
 - `LocalTime` 获取当前时间
-- `LocalDateTime`格式化日期
+- `DateTimeFormatter`格式化日期
+- `of()`方法可以设置日期时间
+- `parse()`方法同`of`类似，只不过可以按标准格式传入
 
 ```java
 import java.time.*;
@@ -42,7 +44,7 @@ public class main{
       LocalDateTime ldt = LocalDateTime.now();
 
       /**
-       * 通过 of() 创建日期或时间
+       * 通过 of() parse()设置日期或时间
        */
 
       // 设置日期 2019-12-02
@@ -52,13 +54,13 @@ public class main{
       // 当前日期和时间 2019-12-02T16:43:19.427
       LocalDateTime ldt2 = LocalDateTime.of("2019-12-02T16:43:19");
 
+      LocalDateTime dt = LocalDateTime.parse("2019-11-19T15:16:17");
 
      /**
       * 通过 LocalDateTime 格式化日期  通过java.time.format引入
       */ 
       DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
       System.out.println(dtf.format(LocalDateTime.now())); //  2019-12-02 17:07:28
-
    }
 }
 ```
@@ -66,13 +68,13 @@ public class main{
 `ISO 8601`规定的日期和时间分隔符是T。标准格式如下：
 - 日期：`yyyy-MM-dd`
 - 时间：`HH:mm:ss`
-- 带毫秒的时间：`HH:mm:ss.SSS`
+- 带毫秒的时间：`HH:mm:ss.SSS`d
 - 日期和时间：`yyyy-MM-dd'T'HH:mm:ss`
 - 带毫秒的日期和时间：`yyyy-MM-dd'T'HH:mm:ss.SSS`
 :::
 
 
-### 时间和日期类中还有一些时间日期的运算方法
+### 其它日期的运算方法
 
 - `plusDays()` 增加天数
 - `plusHours()` 增加小时
@@ -88,9 +90,10 @@ public class main{
 - `withMinute()`调整分
 - `withSecond()`调整秒
 
-
 - `isBefore()` 判断某个日期是否在另一个前面
 - `isAfter()` 判断某个日期是否在另一个后面
+- `Duration` 计算两个时刻之间的时间间隔
+- `Period` 计算两个日期之间的天数
 
 ```java
 import java.time.*;
@@ -104,14 +107,12 @@ public class main{
         LocalTime time = LocalTime.now();
         LocalTime newTime = time.plusHours(2); // 增加两个小时
         
-　　　　 
         /**
          * 使用with调整日期时间
          */ 
         LocalDateTime ldt = LocalDateTime.now();
         LocalDateTime ldt2 = ldt.withDayOfMonth(10); // 日期变为10
-        LocalDateTime ldt2 = ldt.withYear(2018); // 年份变为2018
-
+        LocalDateTime ldt3 = ldt.withYear(2018); // 年份变为2018
 
        /**
         * with的其它运算方法
@@ -128,11 +129,33 @@ public class main{
         // 本月第1个工作日:
         LocalDate firstWeekday = LocalDate.now().with(TemporalAdjusters.firstInMonth(DayOfWeek.MONDAY));
 
+
+        /**
+         *  isAfter 和 isBefore
+         */
+
+         // 当前日期在 2019-12-04 之前返回 true, 否则 false
+        LocalDate.now().isBefore(LocalDate.of(2019, 12, 04)); 
+         //当前日期在"09:29:00"之后为返回 true, 否则false
+        LocalTime.now().isAfter(LocalTime.parse("09:29:00"));  
+
+        /** 
+         * Duration 和 Period
+         */ 
+        LocalDateTime start = LocalDateTime.of(2019, 11, 19, 8, 15, 0);
+        LocalDateTime end = LocalDateTime.of(2020, 1, 9, 19, 25, 30);
+        Duration d = Duration.between(start, end); // 返回PT1616H15M30S
+
+        // PT1616H15M30S 表示1616小时15分钟30秒
+
    }
 }
-
 ```
+:::tip 提示
+`Duration`的类型类似于`P...T...`的形式，如`PT1616H15M30S`(1616小时15分钟30秒), `PT`之间表示日期间隔，`T`后面表示时间间隔
 
+
+:::
 
 ## 旧时间API
 
@@ -217,7 +240,7 @@ public class Main {
 ```
 
 
-- 通过`Calendar`的`set`方法来设置日期
+- 通过`Calendar`的`set`方法来设置 日期
 
 ```java
 import java.util.*;

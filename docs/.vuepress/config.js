@@ -24,28 +24,14 @@ module.exports = {
                   "environment_win10"
                 ] 
                },{
-                title: '基本数据类型',
+                title: 'JAVA基础',
                 collapsable: true, // 是否可折叠
                 children: [
-                  
-                ] 
-               }, {
-                title: '面向对象编程',
-                collapsable: true, // 是否可折叠
-                children: [
-                  
-                ] 
-               }, {
-                title: '日期与时间',
-                collapsable: true, // 是否可折叠
-                children: [
-                    "date-1",
-                ] 
-               },  {
-                title: 'IO操作',
-                collapsable: true, // 是否可折叠
-                children: [
-                  
+                   "base_data",
+                   "modifier",
+                   "object",
+                   "date",
+                   "reflect"
                 ] 
                }
             ],
