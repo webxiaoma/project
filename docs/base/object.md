@@ -104,7 +104,7 @@ class Dog extends Animal{
       System.out.println("狗可以吃");
    }
    public void bark(){
-      System.out.println("狗可以吠叫");
+      System.out.println("狗可以吠叫"); 
    }
 }
  
