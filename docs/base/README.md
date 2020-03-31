@@ -7,9 +7,10 @@ meta:
     content: 本文为java基础知识首页
 ---
 
-# Java基础知识
+# Java学习网站
 
-本模块主要讲述`java`基础
+- [java基础教程](http://c.biancheng.net/java/)
+- [廖雪峰的官方网站-java教程](https://www.liaoxuefeng.com/wiki/1252599548343744)
 
 
 

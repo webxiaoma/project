@@ -13,15 +13,13 @@
         Java相关文章
       </h2>
 
-      <p
-        class="action"
-        v-if="data.actionText && data.actionLink"
-      >
-        <NavLink
-          class="action-button"
-          :item="actionLink"
-        />
-      </p>
+      
+        <div class="link-btn-wrap">
+            <NavLink
+            class="action-button"
+            :item="{text:'java基础',link:'/base/base_data.html'}"
+            />
+        </div>
     </header>
 
 
@@ -79,7 +77,12 @@ export default {
       font-size 1.6rem
       line-height 1.3
       color lighten($textColor, 40%)
+    .link-btn-wrap
+       display flex
+       justify-content center
+       padding-bottom 10px
     .action-button
+      margin 5px
       display inline-block
       font-size 1.2rem
       color #fff
@@ -137,7 +140,7 @@ export default {
       h1
         font-size 2rem
       h1, .description, .action
-        margin 1.2rem auto
+        margin 1rem auto
       .description
         font-size 1.2rem
       .action-button

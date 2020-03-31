@@ -1,29 +1,22 @@
 package com;
+import java.math.BigInteger;
+import java.util.Scanner;
+import java.util.Date;
+import java.util.Calendar;
 
-class Animal{
-    public void eat(){
-        System.out.println("动物可以吃");
-    }
-}
-
-class Dog extends Animal{
-    public void eat(){
-        System.out.println("狗可以吃");
-    }
-    public void bark(){
-        System.out.println("狗可以吠叫");
-    }
-}
-
+import java.text.DecimalFormat;
+import java.util.Random;
+import java.math.BigDecimal;
 public class Test{
-    public static void main(String args[]){
-        Animal a = new Animal(); // Animal 对象
-        Animal g = new Dog(); // Dog 对象
+    public static void main(String[] args) {
 
-        Dog d = new Dog(); // Dog对象
+        BigDecimal bd = new BigDecimal("10");
 
-        a.eat(); // 执行 Animal 类的方法
-        g.eat(); //执行 Dog 类的方法
-        d.bark(); // 报错，因为g的引用类型没有bark方法
+
+        System.out.println(bd.add(new BigDecimal("1.1")));
+        System.out.println(bd.divide(new BigDecimal("3"),2, BigDecimal.ROUND_CEILING));
+
     }
 }
+
+

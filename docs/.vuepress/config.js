@@ -27,10 +27,13 @@ module.exports = {
                 title: 'JAVA基础',
                 collapsable: true, // 是否可折叠
                 children: [
-                   "base_data",
-                   "modifier",
-                   "object",
+                   "base_data", //Java数据类型
+                   "number", 
+                   "string", 
+                   "array", 
                    "date",
+                   "modifier",  //Java修饰符
+                   "object",
                    "reflect"
                 ] 
                }
@@ -82,6 +85,13 @@ module.exports = {
         editLinkText: '文章有问题，欢迎提出！'
        
     },
+    plugins:[
+        "@vuepress/back-to-top",
+        ["@vuepress/pwa",{
+            serviceWorker: true,
+            updatePopup: true,
+        }],
+    ]
 };
 
 
