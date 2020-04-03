@@ -12,7 +12,6 @@ public class Test{
 
         BigDecimal bd = new BigDecimal("10");
 
-
         System.out.println(bd.add(new BigDecimal("1.1")));
         System.out.println(bd.divide(new BigDecimal("3"),2, BigDecimal.ROUND_CEILING));
 
