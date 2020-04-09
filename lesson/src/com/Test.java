@@ -10,10 +10,15 @@ import java.math.BigDecimal;
 public class Test{
     public static void main(String[] args) {
 
-        BigDecimal bd = new BigDecimal("10");
+        StringBuilder strb = new StringBuilder("test");
 
-        System.out.println(bd.add(new BigDecimal("1.1")));
-        System.out.println(bd.divide(new BigDecimal("3"),2, BigDecimal.ROUND_CEILING));
+        StringBuilder a = strb.reverse();
+        System.out.println(a);  // test
+
+
+        strb.insert(2,"111");
+
+        System.out.println(strb );  // test
 
     }
 }

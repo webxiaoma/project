@@ -28,11 +28,11 @@ module.exports = {
                 collapsable: true, // 是否可折叠
                 children: [
                    "base_data", //Java数据类型
+                   "modifier",  //Java修饰符
                    "number", 
                    "string", 
                    "array", 
                    "date",
-                   "modifier",  //Java修饰符
                    "object",
                    "reflect"
                 ] 
@@ -41,17 +41,17 @@ module.exports = {
             "/tools/":[
                 "",
                {
-                title: 'Idea工具',
-                collapsable: true, // 是否可折叠
-                children: [
+                 title: 'Idea工具',
+                 collapsable: true, // 是否可折叠
+                 children: [
                    "idea"
-                ] 
+                 ] 
                }, {
                 title: 'Maven',
                 collapsable: true, // 是否可折叠
                 children: [
-                   "maven",
-                   "tomcat"
+                "maven",
+                "tomcat"
                 ] 
                }
             ]
