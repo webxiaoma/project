@@ -29,9 +29,7 @@ meta:
 - `int indexOf(String str)` 字符查找 返回字符串首次出现的索引位置
 - `int lastlndexOf(String str)` 字符查找 返回字符串最后一次出现的索引位置
 
- 
-
-::: tip  需要注意
+:::tip  需要注意
 `equals()` 方法比较字符串对象中的字符。而`==`运算符比较两个对象引用看它们是否引用相同的实例。
 :::
 
@@ -50,7 +48,6 @@ public class Test{
     }
 }
 ```
-
 
 ## `StringBuffer 类`
 
@@ -92,7 +89,7 @@ public class Test{
         strb.insert(1,"111");
         System.out.println(strb);  // tA111
 
-         strb.append("test test test test");
+        strb.append("test test test test");
         System.out.println(strb.capacity()); // 22
     }
 }

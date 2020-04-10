@@ -1,25 +1,20 @@
 package com;
 import java.math.BigInteger;
-import java.util.Scanner;
-import java.util.Date;
-import java.util.Calendar;
+import java.util.*;
 
 import java.text.DecimalFormat;
-import java.util.Random;
 import java.math.BigDecimal;
 public class Test{
     public static void main(String[] args) {
 
-        StringBuilder strb = new StringBuilder("test");
+         int[] ary = {1,13,2,51,12,54,65,3};
 
-        StringBuilder a = strb.reverse();
-        System.out.println(a);  // test
+        System.out.println(Arrays.binarySearch(ary,51));
+        System.out.println(Arrays.toString(Arrays.copyOf(ary,2)));
+        System.out.println(Arrays.toString(Arrays.copyOfRange(ary,0,3)));
 
-
-        strb.insert(2,"111");
-
-        System.out.println(strb );  // test
-
+        Arrays.fill(ary,0,3,1);
+        System.out.println(Arrays.toString(ary));
     }
 }
 
