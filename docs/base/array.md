@@ -59,17 +59,11 @@ int[][] temp = new int[][]{{5,2},{34,3}};
 - `void sort(type[] a, int fromIndex, int toIndex)` 数组排序 `formIndex` 和 `toIndex`可选
 - `String toString(type[] a)`将一个数组转换成一个字符串
 
-
-```java
-
-
-
-```
 ### Java8 在Arrays类下新增的方法
 
 增加了并发支持
 
-<!-- - `void parallelPrefix(xxx[] array, int fromIndex, int toIndex, XxxBinaryOperator op)`
+- `void parallelPrefix(xxx[] array, int fromIndex, int toIndex, XxxBinaryOperator op)`
 
 1. `a`为要查询的数，
 2. `formIndex` 可选，开始查询的索引 
@@ -82,10 +76,3 @@ int[][] temp = new int[][]{{5,2},{34,3}};
 - `Spliterator.OfXxx spliterator(xxx[] array, int startInclusive, int endExclusive)`
 - `XxxStream stream(xxx[] array, int startInclusive, int endExclusive)`
 
-
-
-```java
-
-
-
-``` -->
