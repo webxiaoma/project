@@ -14,7 +14,7 @@ meta:
 
 ### 一维数组
 
-`type[] aryName` 数组类型[] 数组名称
+`type[] aryName` 数组类型`[]` 数组名称
 
 ```java
 //方法一
@@ -27,7 +27,7 @@ int[] num = new int[5]; //初始化长度为5的 int类型数组
 
 ### 二维数组
 
-`type[][] aryName` 数组类型[][] 数组名称
+`type[][] aryName` 数组类型`[][]` 数组名称
 
 ```java
 //方法一
