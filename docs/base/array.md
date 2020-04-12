@@ -40,10 +40,10 @@ int[][] num = new int[5][2]; //初始化一维长度为5，二维长度为2的 i
 int[][] temp = new int[][]{{5,2},{34,3}};
 ```
 
-
+<!-- 
 ## 数组工具Arrays类
 
-`Arrays类`位于`java.util`中
+`Arrays类` 位于 `java.util` 中
 
 - `int binarySearch(type[] a, int fromIndex, int toIndex, type key)` 使用二分法查询 不存在反回负数
 
@@ -58,6 +58,7 @@ int[][] temp = new int[][]{{5,2},{34,3}};
 - `void fill(type[] a, int fromIndex, int toIndex, type val)` 数组填充 `formIndex` 和 `toIndex`可选,val为填充值
 - `void sort(type[] a, int fromIndex, int toIndex)` 数组排序 `formIndex` 和 `toIndex`可选
 - `String toString(type[] a)`将一个数组转换成一个字符串
+
 
 ### Java8 在Arrays类下新增的方法
 
@@ -75,4 +76,4 @@ int[][] temp = new int[][]{{5,2},{34,3}};
 - `void parallelSort(xxx[] a，int fromIndex, int toIndex)`
 - `Spliterator.OfXxx spliterator(xxx[] array, int startInclusive, int endExclusive)`
 - `XxxStream stream(xxx[] array, int startInclusive, int endExclusive)`
-
+ -->
