@@ -14,36 +14,34 @@ meta:
 
 ### 一维数组
 
-`type[] aryName` 数组类型[] 数组名称
+`type[] aryName` 数组类型 `[]` 数组名称
 
 ```java
 //方法一
-int[] ary = {1,2,3,4}; // 声明一个int类型的数组
+int[] ary = \{1,2,3,4\}; // 声明一个int类型的数组
 
 //方法二
 int[] num = new int[5]; //初始化长度为5的 int类型数组 
-```
+
 
 
 ### 二维数组
 
-`type[][] aryName` 数组类型[][] 数组名称
+`type[][] aryName` 数组类型`[][]` 数组名称
 
 ```java
 //方法一
-int[][] ary = {{12,3},{12,3}}; // 声明一个int类型的数组
-
-//方法二
-int[][] num = new int[5][2]; //初始化一维长度为5，二维长度为2的 int类型数组 
-
-//方法三
-int[][] temp = new int[][]{{5,2},{34,3}};
+int[][] ary = \{\{12,3\},\{12,3\}\} // 声明一个int类型的数组
+//方法二 
+int[][] num = new int[5][2] //初始化一维长度为5，二维长度为2的 int类型数组 
+//方法三 
+int[][] temp = new int[][]\{\{5,2\},\{34,3\}\} 
 ```
 
 
 ## 数组工具Arrays类
 
-`Arrays类`位于`java.util`中
+`Arrays类` 位于 `java.util` 中
 
 - `int binarySearch(type[] a, int fromIndex, int toIndex, type key)` 使用二分法查询 不存在反回负数
 
@@ -59,16 +57,18 @@ int[][] temp = new int[][]{{5,2},{34,3}};
 - `void sort(type[] a, int fromIndex, int toIndex)` 数组排序 `formIndex` 和 `toIndex`可选
 - `String toString(type[] a)`将一个数组转换成一个字符串
 
+
 ```java
 
 
 
 ```
+
 ### Java8 在Arrays类下新增的方法
 
 增加了并发支持
 
-<!-- - `void parallelPrefix(xxx[] array, int fromIndex, int toIndex, XxxBinaryOperator op)`
+- `void parallelPrefix(xxx[] array, int fromIndex, int toIndex, XxxBinaryOperator op)`
 
 1. `a`为要查询的数，
 2. `formIndex` 可选，开始查询的索引 
@@ -81,10 +81,3 @@ int[][] temp = new int[][]{{5,2},{34,3}};
 - `Spliterator.OfXxx spliterator(xxx[] array, int startInclusive, int endExclusive)`
 - `XxxStream stream(xxx[] array, int startInclusive, int endExclusive)`
 
-
-
-```java
-
-
-
-``` -->
