@@ -59,7 +59,6 @@ int[][] temp = new int[][]{{5,2},{34,3}};
 - `void sort(type[] a, int fromIndex, int toIndex)` 数组排序 `formIndex` 和 `toIndex`可选
 - `String toString(type[] a)`将一个数组转换成一个字符串
 
-
 ```java
 
 
