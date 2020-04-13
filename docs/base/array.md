@@ -59,12 +59,26 @@ int[][] temp = new int[][]\{\{5,2\},\{34,3\}\}
 
 
 ```java
+import java.util.Arrays;
 
+public class Test{
+    public static void main(String[] args) {
 
+         int[] ary = \{1,13,2,51,12,54,65,3\};
 
+        System.out.println(Arrays.binarySearch(ary,51)); // 3
+        System.out.println(Arrays.toString(Arrays.copyOf(ary,2))); // [1, 13]
+        System.out.println(Arrays.toString(Arrays.copyOfRange(ary,0,3))); // [1, 13, 2]
+
+        Arrays.fill(ary,0,3,1);
+        System.out.println(Arrays.toString(ary)); //[1, 1, 1, 51, 12, 54, 65, 3]
+    }
+}
 ```
 
-### Java8 在Arrays类下新增的方法
+
+
+## Java8 在Arrays类下新增的方法
 
 增加了并发支持
 
@@ -80,4 +94,5 @@ int[][] temp = new int[][]\{\{5,2\},\{34,3\}\}
 - `void parallelSort(xxx[] a，int fromIndex, int toIndex)`
 - `Spliterator.OfXxx spliterator(xxx[] array, int startInclusive, int endExclusive)`
 - `XxxStream stream(xxx[] array, int startInclusive, int endExclusive)`
+
 

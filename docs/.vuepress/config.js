@@ -28,12 +28,13 @@ module.exports = {
                 collapsable: true, // 是否可折叠
                 children: [
                    "base_data", //Java数据类型
-                   "modifier",  //Java修饰符
                    "number", 
                    "string", 
                    "array", 
                    "date",
-                   "object",
+                   "modifier",  //Java修饰符
+                   "object2",
+                   "package",
                    "reflect"
                 ] 
                }
