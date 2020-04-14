@@ -106,14 +106,3 @@ public class Cat extends Animal {
 
 
 
-
-
-## 抽象类
-
-
-
-
-
-
-
-## 接口
